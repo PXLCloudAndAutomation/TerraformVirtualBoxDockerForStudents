@@ -55,7 +55,7 @@ $ terraform plan -var-file=../terraform.tfvars
 Always clean up before going to the next (or previous) example, otherwise (strange) errors can occur. Debugging those is time consuming.
 
 ```bash
-$ terraform destroy
+$ terraform destroy -var-file=../terraform.tfvars
 ```
 
 ## The examples and exercise.
