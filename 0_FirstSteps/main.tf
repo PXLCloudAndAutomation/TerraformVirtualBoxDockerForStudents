@@ -16,6 +16,7 @@
 # Conclusion     : Destroy removes everything.
 # ------------------------------------------------------------------------------
 provider "docker" {
+  version = "~> 1.1"
   host = "tcp://${var.docker_host_ip}:${var.docker_host_port}/"
 }
 
