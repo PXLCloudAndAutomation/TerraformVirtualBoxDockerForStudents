@@ -3,6 +3,10 @@ provider "docker" {
   host = "tcp://${var.docker_host_ip}:${var.docker_host_port}/"
 }
 
+provider "random" {
+  version = "~> 2.0"
+}
+
 resource "random_string" "name" {
   length = 7
   special = false

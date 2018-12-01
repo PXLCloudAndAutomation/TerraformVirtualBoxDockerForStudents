@@ -5,13 +5,13 @@
 # ------------------------------------------------------------------------------
 # Exercise step 1: Apply this setup.
 # Observe part 1 : Inspect the Terraform output.
-# Observe part 2 : Inspect the container in the vm. (i.e. $ sudo docker ps -a)
-# Observe part 3 : Inspect the image in the vm. (i.e. $ sudo docker image ls)
+# Observe part 2 : Inspect the container on the docker host. (i.e. $ sudo docker ps -a)
+# Observe part 3 : Inspect the image on the docker host. (i.e. $ sudo docker image ls)
 # Exercise step 1: Destroy this setup. (i.e. $ terraform destroy)
 # Observe part 1 : Inspect the Terraform output.
-# Observe part 2 : Inspect the container in the vm. (i.e. $ sudo docker ps -a)
-# Observe part 3 : Inspect the image in the vm. (i.e. $ sudo docker image ls)
-# Question       : Is there anything left in the vm?
+# Observe part 2 : Inspect the container on the docker host. (i.e. $ sudo docker ps -a)
+# Observe part 3 : Inspect the image on the docker host. (i.e. $ sudo docker image ls)
+# Question       : Is there anything left on the docker host?
 # Answer         : _____________________________________________________________
 # Conclusion     : Destroy removes everything.
 # ------------------------------------------------------------------------------

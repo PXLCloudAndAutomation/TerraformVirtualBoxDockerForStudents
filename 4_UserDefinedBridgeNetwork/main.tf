@@ -13,7 +13,7 @@ resource "docker_network" "inner" {
 }
 
 # ----------------------------------------------------------------------------
-# Exercise step 1: Log in to the box (i.e. $ vagrant ssh)
+# Exercise step 1: Go to the docker host (If Vagrant was used: $ vagrant ssh )
 # Observe part 1 : Check the containers (i.e. $ sudo docker ps -a)
 # Exercise step 2: Connect to webserver2 (i.e. $ sudo docker exe -i -t webserver2 /bin/bash)
 # Exercise step 3: Install ping (i.e. $ apt install iputils-ping)

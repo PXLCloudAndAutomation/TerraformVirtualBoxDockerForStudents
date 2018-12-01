@@ -4,6 +4,11 @@ provider "docker" {
 }
 
 
+provider "null" {
+  version = "~> 1.0"
+}
+
+
 resource "docker_image" "docker_registry" {
   name = "registry:2"
 }

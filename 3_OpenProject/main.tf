@@ -4,6 +4,11 @@ provider "docker" {
 }
 
 
+provider "null" {
+  version = "~> 1.0"
+}
+
+
 resource "docker_image" "openproject" {
   name = "openproject/community:8"
 }
@@ -69,7 +74,7 @@ resource "null_resource" "provision_requirements" {
 
   provisioner "remote-exec" {
     inline = [
-      "mkdir -p /home/${var.ssh_user}/openproject/{pgdata,logs,static}",
+      "mkdir -p /home/${var.ssh_user}/openproject/",
     ]
   }
   

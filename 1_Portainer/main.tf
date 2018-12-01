@@ -16,6 +16,8 @@ resource "docker_container" "portainer" {
   name = "portainer"
   image = "${docker_image.portainer.latest}"
 
+  restart = "always"
+
   ports {
     internal = 9000
     external = 9000

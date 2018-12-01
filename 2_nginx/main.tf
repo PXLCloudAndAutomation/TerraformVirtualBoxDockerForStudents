@@ -3,6 +3,9 @@ provider "docker" {
   host = "tcp://${var.docker_host_ip}:${var.docker_host_port}/"
 }
 
+provider "null" {
+  version = "~> 1.0"
+}
 
 resource "docker_image" "nginx" {
   name = "nginx:1.11-alpine"
