@@ -130,7 +130,7 @@ The response should be in `JSON` format and look like:
 {"Platform":{"Name":"Docker Engine - Community"},"Components":[{"Name":"Engine","Version":"18.09.0","Details":{"ApiVersion":"1.39","Arch":"amd64","BuildTime":"2018-11-07T00:19:08.000000000+00:00","Experimental":"false","GitCommit":"4d60db4","GoVersion":"go1.10.4","KernelVersion":"3.10.0-862.14.4.el7.x86_64","MinAPIVersion":"1.12","Os":"linux"}}],"Version":"18.09.0","ApiVersion":"1.39","MinAPIVersion":"1.12","GitCommit":"4d60db4","GoVersion":"go1.10.4","Os":"linux","Arch":"amd64","KernelVersion":"3.10.0-862.14.4.el7.x86_64","BuildTime":"2018-11-07T00:19:08.000000000+00:00"}
 ```
 
-#### 6. Fillin the correct `terraform.tfvars`
+#### 6. Fill-in the correct `terraform.tfvars`
 Docker is installed on the local machine and it's possible to SSH to localhost using only the key. In other words, the virtual machine also acts as the remote server. After cloning this repository, edit the  `terraform.tfvars` file and fill-in the correct values:
 
 ```bash
@@ -140,6 +140,20 @@ ssh_port = "22"
 ssh_user = "vagrant"
 ssh_key = "˜/.ssh/id_rsa.pub"
 ```
+
+#### 6. Download and install Terraform
+Download the Linux 64-bit binary  from [terraform.io](https://www.terraform.io/downloads.html). It's a zip containing the binary `terraform` command. Unzip the file after downloading.
+
+Create the `~/bin` directory by executing `$ mkdir ~/bin` and move the `terraform` binary file to this directory. The next step will add this directory to the `$PATH` environment  variable.
+
+Add the following line to the file `~/.bashrc`:
+
+```bash
+export PATH="$HOME/bin:$PATH"
+``` 
+
+Restart the terminal to apply the `PATH` variable change!
+
 
 **If you followed all these steps correctly, you are ready to plan, apply and destroy all the examples!**
 
@@ -196,7 +210,7 @@ This is an exercise. Building upon the gained knowledge of the previous examples
 Look at the `main.tf` file for more instructions.
 
 ###  `6_SimpleDockerRegistry`
-An simple (and insecure) Docker Registry example with a DockerFile to create an fresh container image.
+An simple (and insecure) Docker Registry example with a `DockerFile` to create an fresh container image.
 
 ###  `7_RandomStrings`
 A small example how to generate random strings with Terraform.
