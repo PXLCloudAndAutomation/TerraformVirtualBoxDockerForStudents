@@ -53,6 +53,12 @@ The following items are needed to create the VM manually
 The creation and installation of Ubuntu was covered in the course Desktop OS during the first year.
 Installing an OpenSSH server is part of the Server Essentials course (2nd year).
 
+If you forgot to add the OpenSSH server during installation, the next command will add it for you:
+
+```bash
+$ sudo apt install openssh-server
+```
+
 
 #### 2. Install Docker-ce incl. dockerd listening on TCP IP 127.0.0.1 and port 2375
 De following link explains, during its first step (Step 1), how to install `docker-ce`. The other steps (Step 2 - ...) are not needed for this repository.
@@ -137,11 +143,13 @@ Docker is installed on the local machine and it's possible to SSH to localhost u
 docker_host_ip = "127.0.0.1"
 ssh_host = "127.0.0.1"
 ssh_port = "22"
-ssh_user = "vagrant"
+ssh_user = "!!! YOUR USER NAME!!!"
 ssh_key = "˜/.ssh/id_rsa.pub"
 ```
 
-#### 6. Download and install Terraform
+**Note:** Change "!!! YOUR USER NAME!!!" with the correct value.
+
+#### 7. Download and install Terraform
 Download the Linux 64-bit binary  from [terraform.io](https://www.terraform.io/downloads.html). It's a zip containing the binary `terraform` command. Unzip the file after downloading.
 
 Create the `~/bin` directory by executing `$ mkdir ~/bin` and move the `terraform` binary file to this directory. The next step will add this directory to the `$PATH` environment  variable.
