@@ -108,13 +108,13 @@ Modify the line stating with `ExecStart`, more specific add `-H tcp://127.0.0.1:
 **DO NOT change the existing part.** The line should end up looking like:
 
 ```bash
-ExecStart=/usr/bin/dockerd -H unix:// -H tcp://0.0.0.0:2375
+ExecStart=/usr/bin/dockerd -H unix:// -H tcp://127.0.0.1:2375
 ```
 
 or:
 
 ```bash
-ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
 ```
 
 All that's left for Docker is to restart and enable it on boot. Enter therefor these two commands:
@@ -144,7 +144,7 @@ docker_host_ip = "127.0.0.1"
 ssh_host = "127.0.0.1"
 ssh_port = "22"
 ssh_user = "!!! YOUR USER NAME!!!"
-ssh_key = "˜/.ssh/id_rsa"
+ssh_key = "~/.ssh/id_rsa"
 ```
 
 **Note:** Change "!!! YOUR USER NAME!!!" with the correct value.
