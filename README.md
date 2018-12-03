@@ -144,7 +144,7 @@ docker_host_ip = "127.0.0.1"
 ssh_host = "127.0.0.1"
 ssh_port = "22"
 ssh_user = "!!! YOUR USER NAME!!!"
-ssh_key = "˜/.ssh/id_rsa.pub"
+ssh_key = "˜/.ssh/id_rsa"
 ```
 
 **Note:** Change "!!! YOUR USER NAME!!!" with the correct value.
