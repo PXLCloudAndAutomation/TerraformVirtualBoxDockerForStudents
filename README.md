@@ -129,6 +129,7 @@ To test this part, execute an HTTP request with the `curl` command to `localhost
 ```bash
 $ curl http://127.0.0.1:2375/version
 ```
+**Known problem (in some cases): If there is no response, don't panic. Your VM needs to reboot before the changes have an effect. Solution: Reboot the VM.** 
 
 The response should be in `JSON` format and look like:
 
